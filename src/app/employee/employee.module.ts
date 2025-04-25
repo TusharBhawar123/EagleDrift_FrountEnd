@@ -6,12 +6,13 @@ import { AddEmpComponent } from './modules/employee/components/add-emp/add-emp.c
 import { ListEmpComponent } from './modules/employee/components/list-emp/list-emp.component';
 import { DetailsEmpComponent } from './modules/employee/components/details-emp/details-emp.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     ListEmpComponent,
-    DetailsEmpComponent
+    DetailsEmpComponent,
   ],
   providers: [
     HttpClient
@@ -19,12 +20,14 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
   imports: [
     CommonModule,
     EmployeeRoutingModule,
-    AddEmpComponent,
-    HttpClientModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     ListEmpComponent,
     DetailsEmpComponent,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ]
 })
